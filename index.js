@@ -18,7 +18,7 @@ async function showWeather() {
        console.log(`Failed to Get, error in the Api call`, error);
     }
     // console.log(`${data?.main?.temp.toFixed(2)}`);
-} // // // //{allTheseAreA MendatoryThingsToFetchDataFromAnAPI}
+}; // // // //{allTheseAreA MendatoryThingsToFetchDataFromAnAPI}
 
 
 let secondTab = document.querySelectorAll(".searchWeatherTab");
@@ -38,7 +38,7 @@ scndt.addEventListener('click', secondTabListnerFunc)
 
 
 function secondTabListnerFunc() {
-    wrapper2.classList.add("wrapper2active")
+    wrapper2.classList.add("wrapper2active");
     wrapper.classList.add("wrapperDeactive");
     tab2Bg.classList.add("addBgColor");
     tab1Bg.classList.add("clearBgColor");
