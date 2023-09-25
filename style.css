@@ -1,0 +1,215 @@
+:root{
+    height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+    background-image: linear-gradient(to top, #047cdf, #acafb1);
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    display: flex;
+}
+
+.wrapper{
+    height: 700px;
+    width: 500px;
+    text-align: center;
+    scale: 1;
+}
+
+.header{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card1{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.yourWeatherTab{
+    background-color: rgb(184, 196, 197, 0.8);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.searchWeatherTab{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* this calssIsToVisibleTheBgOfTABS */
+.activeForCard1{
+    background-color: rgb(184, 196, 197, 0.5);
+}
+
+/* this calssIsToInvisibleTheBgOfTABS */
+.activeForCard1_2{
+    background-color: rgb(184, 196, 197, 0.5);
+}
+
+.card2{
+    width: 100%;
+    height: 230px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.location{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.areaNameDiv{
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.countryImgDiv{
+    margin-top: 25px;
+}
+
+.Update{
+    height: 100px;
+}
+
+/* .areaUpdateDiv{
+
+} */
+
+/* .areaUpdate{
+
+} */
+
+.areaUpdateImgDiv{
+    height: 35px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+/* .areaUpdateImg{
+
+} */
+
+.temprature{
+    margin-top: -20px;
+    height: 90px;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.card3{
+    margin-top: -10px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: transparent;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+.windSpeedDiv{
+    width: 28%;
+    border-radius: 5px;
+    height: 100%;
+    background-color: rgba(210, 245, 248, 0.5);
+    /* width: 28%; */
+}
+
+.humidityDiv{
+    width: 28%;
+    border-radius: 5px;
+    height: 100%;
+    background-color: rgba(210, 245, 248, 0.5);
+    /* width: 28%; */
+}
+
+.cloudyDiv{
+    width: 28%;
+    border-radius: 5px;
+    height: 100%;
+    background-color: rgba(210, 245, 248, 0.5);
+    /* width: 28%; */
+}
+
+.wrapper2{
+    position: absolute;
+    height: 700px;
+    width: 500px;
+    text-align: center;
+    scale: 0;
+}
+
+.searchBar_BtnDiv{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 90%;
+    margin-top: 40px;
+}
+
+.searchBarDiv{
+    margin-right: 5px;
+    margin-left: 60px;
+}
+
+.searchBar{
+    appearance: none;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(189, 234, 238, 0.5);
+    border: none;
+    border-radius: 5px;
+}
+
+.searchBtnDiv{
+    height: 30px;
+    width: 30px;
+}
+
+.searchBtn{
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(244, 246, 247, 0.988);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.wrapperDeactive{
+    scale: 0;
+}
+
+.wrapper2{
+    .card2, .card3{
+        scale: 0; /*it will go as 0*/
+    }
+}
+
+.addBgColor{
+    background-color: rgb(184, 196, 197, 0.8);
+}
+
+.clearBgColor{
+    background-color: transparent;
+}
+
+.wrapper2active{
+    scale: 1;
+}
