@@ -39,7 +39,7 @@ scndt.addEventListener('click', secondTabListnerFunc)
 
 function secondTabListnerFunc() {
     wrapper2.classList.add("wrapper2active")
-    wrapper.classList.add("wrapperDeactive")
+    wrapper.classList.add("wrapperDeactive");
     tab2Bg.classList.add("addBgColor");
     tab1Bg.classList.add("clearBgColor");
 }
