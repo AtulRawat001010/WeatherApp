@@ -34,7 +34,7 @@ let tab2Bg = secondTab[1];
 let frstT = frstTab[1];
 let tab1Bg = frstTab[1];
 
-scndt.addEventListener('click', secondTabListnerFunc)
+scndt.addEventListener('click', secondTabListnerFunc);
 
 
 function secondTabListnerFunc() {
@@ -42,7 +42,7 @@ function secondTabListnerFunc() {
     wrapper.classList.add("wrapperDeactive");
     tab2Bg.classList.add("addBgColor");
     tab1Bg.classList.add("clearBgColor");
-}
+};
 
 frstT.addEventListener('click', firstTabListnerFunc);
 
@@ -51,4 +51,4 @@ function firstTabListnerFunc() {
     wrapper.classList.remove("wrapperDeactive");
     tab2Bg.classList.remove("addBgColor");
     tab1Bg.classList.remove("clearBgColor");
-}
+};
