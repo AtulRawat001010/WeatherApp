@@ -232,6 +232,7 @@ body{
     flex-direction: column;
     align-items: center;
     z-index: 110;
+    /* scale: 0; */
 }
 
 .locationImg{
