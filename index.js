@@ -24,6 +24,9 @@ async function showWeather() {
 let secondTab = document.querySelectorAll(".searchWeatherTab");
 let wrapper = document.querySelector(".wrapper");
 let wrapper2 = document.querySelector(".wrapper2");
+let wrapper3 = document.querySelector(".wrapper3");
+let wrapper4 = document.querySelector(".wrapper4");
+let wrapper5 = document.querySelector(".wrapper5");
 let card2 = document.querySelector(".card2");
 let card3 = document.querySelector(".card3");
 let frstTab = document.querySelectorAll(".yourWeatherTab");
@@ -36,19 +39,24 @@ let tab1Bg = frstTab[1];
 
 scndt.addEventListener('click', secondTabListnerFunc);
 
+frstT.addEventListener('click', firstTabListnerFunc);
 
 function secondTabListnerFunc() {
     wrapper2.classList.add("wrapper2active");
     wrapper.classList.add("wrapperDeactive");
+    wrapper3.classList.add("wrapperDeactive");
+    wrapper4.classList.add("wrapperDeactive");
+    // wrapper5.classList.add("wrapper5notFoundActive");
     tab2Bg.classList.add("addBgColor");
     tab1Bg.classList.add("clearBgColor");
 };
 
-frstT.addEventListener('click', firstTabListnerFunc);
-
 function firstTabListnerFunc() {
     wrapper2.classList.remove("wrapper2active");
     wrapper.classList.remove("wrapperDeactive");
+    wrapper3.classList.remove("wrapperDeactive");
+    wrapper4.classList.remove("wrapperDeactive");
+    // wrapper5.classList.remove("wrapper5notFoundActive");
     tab2Bg.classList.remove("addBgColor");
     tab1Bg.classList.remove("clearBgColor");
 };

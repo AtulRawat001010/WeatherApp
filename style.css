@@ -1,7 +1,7 @@
 :root{
     height: 100vh;
     width: 100vw;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-image: linear-gradient(to top, #047cdf, #acafb1);
     font-family: cursive;
     display: flex;
@@ -10,13 +10,21 @@
 
 body{
     display: flex;
+    flex-direction: column;
 }
 
 .wrapper{
     height: 700px;
     width: 500px;
+    margin-left: 50px;
     text-align: center;
     scale: 1;
+}
+
+.wrapper{
+    .card2, .card3{
+        scale: 0; /*it will go as 0*/
+    }
 }
 
 .header{
@@ -150,6 +158,7 @@ body{
     position: absolute;
     height: 700px;
     width: 500px;
+    margin-left: 50px;
     text-align: center;
     scale: 0;
 }
@@ -191,7 +200,6 @@ body{
     cursor: pointer;
 }
 
-
 .wrapperDeactive{
     scale: 0;
 }
@@ -212,4 +220,133 @@ body{
 
 .wrapper2active{
     scale: 1;
+}
+
+.wrapper3{
+    /* border: 1px solid black; */
+    margin-top: -300px;
+    margin-left: 150px;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 110;
+}
+
+.locationImg{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+.grantLocationHeadingDiv{
+    height: 50px;
+    width: 400px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.wrapper3ParaDiv{
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.grantAccessBtnDiv{
+    /* border: 1px solid black; */
+    height: 25px;
+    width: 120px;
+}
+
+.grantAccessBtn{
+    border: 1px solid black;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(111, 156, 181);
+    padding: 5px;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.grantAccessBtn:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.wrapper4{
+    /* border: 1px solid black; */
+    background-color: transparent;
+    margin-top: -50px;
+    margin-left: 180px;
+    height: 400px;
+    width: 400px;
+    z-index: 50;
+    scale: 0;
+}
+
+.loaderDiv{
+    transform: translateX(60px);
+    /* border: 1px solid black; */
+    height: 80px;
+    width: 60px;
+    text-align: center;
+    scale: 1.5;
+}
+
+.spinner-6 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: s6 1s infinite linear;
+}
+.spinner-6::before,
+.spinner-6::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.spinner-6::before {
+  border-color: #f03355 #0000;
+  animation: inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.spinner-6::after {
+  margin: 8px;
+}
+
+@keyframes s6 { 
+  100%{transform: rotate(1turn)}
+}
+
+.wrapper5{
+    scale: 0;
+    width: 412px;
+    height: 236px;
+    .notFound{
+        width: 412px;
+        height: 236px;
+    }
+}
+
+.wrapper5notFoundActive{
+    /* border: 1px solid black; */
+    border-style: hidden;
+    width: 412px;
+    height: 236px;
+    mix-blend-mode: multiply;
+    margin-top: -350px;
+    margin-left: 100px;
+    scale: 1;
+    box-shadow: 21px 200px 400px 200px rgba(165,34,34,0.41);
+    scale: 3;
+    z-index: -2;
 }
