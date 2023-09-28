@@ -145,6 +145,32 @@ function renderWeatherInfo(weatherData) {
 }
 
 
+function renderWeatherInfo2(weatherData) {
+    let areaName2 = document.querySelector(".areaName2");
+    let countryImg2 = document.querySelector(".countryImg2");
+    let areaUpdate2 = document.querySelector(".areaUpdate2");
+    let areaUpdateImg2 = document.querySelector(".areaUpdateImg2");
+    let tempraturePara2 = document.querySelector(".tempraturePara2");
+    let windSpeedDataPara2 = document.querySelector(".windSpeedDataPara2");
+    let humidityDataPara2 = document.querySelector(".humidityDataPara2");
+    let cloudyDataPara2 = document.querySelector(".cloudyDataPara2");
+
+
+    areaName2.innerText = weatherData?.name;
+    // countryImg.src = `https://flagcdn.com/144x108/.png`;
+    countryImg2.src = `https://flagcdn.com/144x108/${weatherData?.sys?.country}.png`;
+
+    areaUpdate2.innerText = weatherData?.weather?.[0]?.description;
+
+    areaUpdateImg2.src = `https://flagcdn.com/144x108/${weatherData?.weather?.[0]?.icon}.png`;
+
+    tempraturePara2.innerText = weatherData?.main?.temp;
+    windSpeedDataPara2.innerText = weatherData?.wind?.speed;
+    humidityDataPara2.innerText = weatherData?.main?.humidity;
+    cloudyDataPara2.innerText = weatherData?.clods?.all;
+}
+
+
 
 function getLocation() {
     if(navigator.geolocation){
@@ -173,8 +199,12 @@ function showPosition(position) {
 
 
 async function fetchSearchWeatherInfo(city) {
+
+    let areaName2 = document.querySelector(".areaName2");
+
     wrapper4.classList.add("active");
     wrapper3.classList.remove("active");
+    wrapper2.classList.remove("wrapper2Active");
 
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_Key}&units=$metrics`);
@@ -183,9 +213,14 @@ async function fetchSearchWeatherInfo(city) {
 
         wrapper4.classList.remove("active");
         // wrapper2.classList.add("wrapper2Active");
-        wrapper1.classList.add("active");
+        wrapper2.classList.add("wrapper2Active");
 
-        renderWeatherInfo(content);
+        renderWeatherInfo2(content);
+
+        if (areaName2 == undefined) {
+            wrapper5.classList.add("active");
+            wrapper5.classList.add("wrapper5notFoundActive");
+        }
 
     } catch (error) {
         console.log("yaha hai error", error);
